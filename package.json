@@ -2,12 +2,14 @@
   "name": "ruah-verse-website",
   "version": "1.0.0",
   "description": "Modern, responsive website for Ruah Verse - Full-Stack Web Development Services",
+  "homepage": "https://joynicholas2001.github.io/RUAHVERSE-Website/",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "vite"
+    "start": "vite",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.2.0",
