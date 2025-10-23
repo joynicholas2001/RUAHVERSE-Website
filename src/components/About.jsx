@@ -91,26 +91,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="about-stats">
-          <div className="stats-container">
-            <div className="stat-item">
-              <h4>50+</h4>
-              <p>Successful Projects</p>
-            </div>
-            <div className="stat-item">
-              <h4>30+</h4>
-              <p>Satisfied Clients</p>
-            </div>
-            <div className="stat-item">
-              <h4>5+</h4>
-              <p>Years of Excellence</p>
-            </div>
-            <div className="stat-item">
-              <h4>24/7</h4>
-              <p>Support Available</p>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
   )
