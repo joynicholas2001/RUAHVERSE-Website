@@ -16,57 +16,101 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="footer">
-      <div className="container">
-        <div className="footer-content">
+    <footer className="bg-gray-900 text-white relative overflow-hidden">
+      <div className="max-w-6xl mx-auto px-5 py-16">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {/* Brand and Social Links */}
-          <div className="footer-section footer-brand-section">
-            <h3 className="footer-brand">
-              <span className="logo-primary">Ruah</span>
-              <span className="logo-secondary">Verse</span>
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold">
+              <span className="text-primary-400">Ruah</span>
+              <span className="text-secondary-400">Verse</span>
             </h3>
-            <p className="footer-description">
+            <p className="text-gray-300 text-sm leading-relaxed max-w-xs">
               Professional web development services. Let's build your digital future together.
             </p>
-            <div className="footer-social">
-              <a href="#" className="social-link" aria-label="LinkedIn">
-                <FaLinkedin />
+            <div className="flex space-x-4">
+              <a 
+                href="#" 
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-500 transition-colors duration-300"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin className="text-lg" />
               </a>
-              <a href="#" className="social-link" aria-label="GitHub">
-                <FaGithub />
+              <a 
+                href="#" 
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-500 transition-colors duration-300"
+                aria-label="GitHub"
+              >
+                <FaGithub className="text-lg" />
               </a>
-              <a href="#" className="social-link" aria-label="Twitter">
-                <FaTwitter />
+              <a 
+                href="#" 
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-500 transition-colors duration-300"
+                aria-label="Twitter"
+              >
+                <FaTwitter className="text-lg" />
               </a>
             </div>
           </div>
 
           {/* Navigation Links */}
-          <div className="footer-section footer-nav-section">
-            <h4 className="footer-title">Quick Links</h4>
-            <ul className="footer-links">
-              <li><a href="#about" onClick={() => scrollToSection('about')}>About</a></li>
-              <li><a href="#services" onClick={() => scrollToSection('services')}>Services</a></li>
-              <li><a href="#projects" onClick={() => scrollToSection('projects')}>Projects</a></li>
-              <li><a href="#contact" onClick={() => scrollToSection('contact')}>Contact</a></li>
+          <div className="space-y-6">
+            <h4 className="text-lg font-semibold text-white">Quick Links</h4>
+            <ul className="space-y-3">
+              <li>
+                <a 
+                  href="#about" 
+                  onClick={() => scrollToSection('about')}
+                  className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#services" 
+                  onClick={() => scrollToSection('services')}
+                  className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm"
+                >
+                  Services
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#projects" 
+                  onClick={() => scrollToSection('projects')}
+                  className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm"
+                >
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#contact" 
+                  onClick={() => scrollToSection('contact')}
+                  className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm"
+                >
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
 
           {/* Contact Information */}
-          <div className="footer-section footer-contact-section">
-            <h4 className="footer-title">Get In Touch</h4>
-            <div className="footer-contact">
-              <div className="contact-item">
-                <FaEnvelope className="contact-icon" />
-                <span>itzjoynicholas@gmail.com</span>
+          <div className="space-y-6">
+            <h4 className="text-lg font-semibold text-white">Get In Touch</h4>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <FaEnvelope className="text-primary-400 text-sm flex-shrink-0" />
+                <span className="text-gray-300 text-sm">itzjoynicholas@gmail.com</span>
               </div>
-              <div className="contact-item">
-                <FaPhone className="contact-icon" />
-                <span>+91 9963416422</span>
+              <div className="flex items-center space-x-3">
+                <FaPhone className="text-primary-400 text-sm flex-shrink-0" />
+                <span className="text-gray-300 text-sm">+91 9963416422</span>
               </div>
             </div>
             <button 
-              className="btn-primary footer-cta-btn"
+              className="btn-primary text-sm px-6 py-2 hover:transform hover:-translate-y-1 transition-all duration-300"
               onClick={() => scrollToSection('contact')}
             >
               Start Project
@@ -74,32 +118,41 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="footer-bottom">
-          <div className="footer-bottom-content">
-            <div className="footer-legal">
-              <p>&copy; {currentYear} Ruah Verse. All rights reserved.</p>
-              <div className="legal-links">
-                <a href="#privacy">Privacy Policy</a>
-                <a href="#terms">Terms of Service</a>
-                <a href="#cookies">Cookie Policy</a>
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-center md:text-left">
+              <p className="text-gray-400 text-sm">&copy; {currentYear} Ruah Verse. All rights reserved.</p>
+              <div className="flex flex-wrap justify-center md:justify-start space-x-6 mt-2">
+                <a href="#privacy" className="text-gray-400 hover:text-primary-400 text-xs transition-colors duration-300">
+                  Privacy Policy
+                </a>
+                <a href="#terms" className="text-gray-400 hover:text-primary-400 text-xs transition-colors duration-300">
+                  Terms of Service
+                </a>
+                <a href="#cookies" className="text-gray-400 hover:text-primary-400 text-xs transition-colors duration-300">
+                  Cookie Policy
+                </a>
               </div>
             </div>
-            <div className="footer-back-to-top">
-              <button onClick={scrollToTop} className="back-to-top" aria-label="Back to top">
-                <FaArrowUp />
+            <div className="flex items-center">
+              <button 
+                onClick={scrollToTop} 
+                className="w-10 h-10 bg-primary-500 hover:bg-primary-600 rounded-full flex items-center justify-center transition-all duration-300 hover:transform hover:-translate-y-1"
+                aria-label="Back to top"
+              >
+                <FaArrowUp className="text-sm" />
               </button>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="footer-decoration">
-        <div className="decoration-line"></div>
-        <div className="decoration-dots">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+      {/* Decorative elements */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 to-secondary-500"></div>
+      <div className="absolute top-4 right-4 flex space-x-1 opacity-20">
+        <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
+        <span className="w-2 h-2 bg-secondary-500 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></span>
+        <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></span>
       </div>
     </footer>
   )
