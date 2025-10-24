@@ -94,16 +94,6 @@ const Services = () => {
             </div>
           </div>
         </div>
-
-        <div className="services-cta">
-          <div className="cta-content">
-            <h3>Ready to Start Your Project?</h3>
-            <p>Let's discuss your requirements and bring your vision to life</p>
-            <button className="btn-primary" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
-              Get a Free Consultation
-            </button>
-          </div>
-        </div>
       </div>
     </section>
   )

@@ -1061,6 +1061,13 @@ section {
   grid-template-columns: 1fr 1.2fr;
   gap: 80px;
   margin-bottom: 80px;
+  align-items: start; /* Ensure items align to the start for sticky to work well */
+}
+
+.contact-form-container {
+  position: sticky;
+  top: 20px; /* Adjust as needed for spacing from the top */
+  align-self: start; /* Ensure it aligns to the start within its grid cell */
 }
 
 .info-card {

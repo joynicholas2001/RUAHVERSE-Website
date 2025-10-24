@@ -1,88 +1,22 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { FaExternalLinkAlt, FaGithub, FaCode, FaEye } from 'react-icons/fa'
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState('all')
-
   const projects = [
     {
       id: 1,
       title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with React frontend, Python Django backend, and PostgreSQL database. Features include user authentication, payment integration, and admin dashboard.",
+      description: "React based E-Commerce solution with React frontend, Mongo database. Features include user authentication, payment integration, and admin dashboard.",
       image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop&crop=top",
-      technologies: ["React", "Django", "PostgreSQL", "Stripe API"],
-      category: "fullstack",
+      technologies: ["React", "Mongo DB", "API Integration", "3 Different Payment gateways for 3 branches"],
       features: ["User Authentication", "Payment Gateway", "Inventory Management", "Order Tracking"],
-      liveUrl: "#",
-      githubUrl: "#"
+      liveUrl: "https://artgram.in",
     },
-    {
-      id: 2,
-      title: "Task Management App",
-      description: "Collaborative task management application built with React and MongoDB. Real-time updates, team collaboration, and project tracking capabilities.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop&crop=center", 
-      technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
-      category: "fullstack",
-      features: ["Real-time Collaboration", "Task Assignment", "Progress Tracking", "Team Management"],
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      id: 3,
-      title: "Restaurant Website",
-      description: "Modern restaurant website with online reservation system, menu display, and customer reviews. Responsive design with smooth animations.",
-      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=250&fit=crop&crop=center",
-      technologies: ["React", "CSS3", "JavaScript", "Firebase"],
-      category: "frontend",
-      features: ["Online Reservations", "Menu Display", "Customer Reviews", "Gallery"],
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      id: 4,
-      title: "Analytics Dashboard",
-      description: "Data visualization dashboard for business analytics with interactive charts, real-time data updates, and custom reporting features.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&crop=center",
-      technologies: ["React", "Python", "PostgreSQL", "Chart.js"],
-      category: "fullstack",
-      features: ["Data Visualization", "Real-time Updates", "Custom Reports", "Export Functionality"],
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      id: 5,
-      title: "Blog Platform",
-      description: "Content management system with rich text editor, user roles, and SEO optimization. Built with modern web technologies.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=250&fit=crop&crop=center",
-      technologies: ["React", "Django", "PostgreSQL", "Redis"],
-      category: "fullstack",
-      features: ["Rich Text Editor", "User Roles", "SEO Optimization", "Comment System"],
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      id: 6,
-      title: "Portfolio Website",
-      description: "Creative portfolio website with smooth animations, responsive design, and contact form integration.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=250&fit=crop&crop=center",
-      technologies: ["React", "CSS3", "JavaScript", "Netlify"],
-      category: "frontend",
-      features: ["Smooth Animations", "Contact Form", "Image Gallery", "Mobile Responsive"],
-      liveUrl: "#",
-      githubUrl: "#"
-    }
+    
   ]
 
-  const filters = [
-    { key: 'all', label: 'All Projects' },
-    { key: 'fullstack', label: 'Full-Stack' },
-    { key: 'frontend', label: 'Frontend' },
-    { key: 'backend', label: 'Backend' }
-  ]
 
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter)
+  const filteredProjects = projects
 
   return (
     <section id="projects" className="projects">
@@ -94,17 +28,6 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="project-filters">
-          {filters.map(filter => (
-            <button 
-              key={filter.key}
-              className={`filter-btn ${activeFilter === filter.key ? 'active' : ''}`}
-              onClick={() => setActiveFilter(filter.key)}
-            >
-              {filter.label}
-            </button>
-          ))}
-        </div>
 
         <div className="projects-grid">
           {filteredProjects.map(project => (
@@ -113,18 +36,15 @@ const Projects = () => {
                 <img src={project.image} alt={project.title} />
                 <div className="project-overlay">
                   <div className="project-links">
-                    <a href={project.liveUrl} className="project-link" title="View Live">
+                    <a href={project.liveUrl} className="project-link" title="View Live" target="_blank" rel="noopener noreferrer">
                       <FaEye />
-                    </a>
-                    <a href={project.githubUrl} className="project-link" title="View Code">
-                      <FaGithub />
                     </a>
                   </div>
                 </div>
               </div>
               
               <div className="project-content">
-                <h3 className="project-title">{project.title}</h3>
+                <h3 className="project.title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
                 
                 <div className="project-technologies">
@@ -143,33 +63,15 @@ const Projects = () => {
                 </div>
 
                 <div className="project-actions">
-                  <a href={project.liveUrl} className="btn-primary">
+                  <a href={project.liveUrl} className="btn-primary" target="_blank" rel="noopener noreferrer">
                     <FaExternalLinkAlt /> View Live
-                  </a>
-                  <a href={project.githubUrl} className="btn-secondary">
-                    <FaCode /> View Code
                   </a>
                 </div>
               </div>
             </div>
           ))}
         </div>
-
-        <div className="projects-cta">
-          <div className="cta-content">
-            <h3>Interested in Working With Us?</h3>
-            <p>
-              These projects represent just a fraction of our capabilities. 
-              Let's discuss how we can bring your unique vision to life.
-            </p>
-            <button 
-              className="btn-primary"
-              onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-            >
-              Start Your Project
-            </button>
-          </div>
-        </div>
+   
 
         <div className="project-process">
           <h3>Our Project Development Process</h3>
