@@ -3,11 +3,13 @@ import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter } 
 
 const Contact = () => {
   return (
-    <section id="contact" className="contact">
-      <div className="container">
-        <div className="section-header">
-          <h2 className="section-title">Get In Touch</h2>
-          <p className="section-subtitle">
+    <section id="contact" className="py-20 bg-white">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl font-bold mb-5 bg-gradient-to-br from-primary-500 to-secondary-500 bg-clip-text text-transparent">
+            Get In Touch
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Ready to bring your project to life? Let's start the conversation.
           </p>
         </div>

@@ -42,11 +42,13 @@ const Services = () => {
   ]
 
   return (
-    <section id="services" className="services">
-      <div className="container">
-        <div className="section-header">
-          <h2 className="section-title">Our Services</h2>
-          <p className="section-subtitle">
+    <section id="services" className="py-20 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl font-bold mb-5 bg-gradient-to-br from-primary-500 to-secondary-500 bg-clip-text text-transparent">
+            Our Services
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Comprehensive web development solutions tailored to your business needs
           </p>
         </div>

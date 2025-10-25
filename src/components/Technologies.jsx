@@ -62,11 +62,13 @@ const Technologies = () => {
   ]
 
   return (
-    <section id="technologies" className="technologies">
-      <div className="container">
-        <div className="section-header">
-          <h2 className="section-title">Technologies We Use</h2>
-          <p className="section-subtitle">
+    <section id="technologies" className="py-20 bg-white">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl font-bold mb-5 bg-gradient-to-br from-primary-500 to-secondary-500 bg-clip-text text-transparent">
+            Technologies We Use
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Cutting-edge tools and frameworks that power our development process
           </p>
         </div>

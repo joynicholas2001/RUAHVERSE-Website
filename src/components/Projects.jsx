@@ -19,11 +19,13 @@ const Projects = () => {
   const filteredProjects = projects
 
   return (
-    <section id="projects" className="projects">
-      <div className="container">
-        <div className="section-header">
-          <h2 className="section-title">Sample Projects</h2>
-          <p className="section-subtitle">
+    <section id="projects" className="py-20 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl font-bold mb-5 bg-gradient-to-br from-primary-500 to-secondary-500 bg-clip-text text-transparent">
+            Sample Projects
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Showcasing our expertise through real-world applications and solutions
           </p>
         </div>
