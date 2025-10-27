@@ -28,29 +28,7 @@ const Footer = () => {
             <p className="text-gray-300 text-sm leading-relaxed max-w-xs">
               Professional web development services. Let's build your digital future together.
             </p>
-            <div className="flex space-x-4">
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-500 transition-colors duration-300"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedin className="text-lg" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-500 transition-colors duration-300"
-                aria-label="GitHub"
-              >
-                <FaGithub className="text-lg" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-500 transition-colors duration-300"
-                aria-label="Twitter"
-              >
-                <FaTwitter className="text-lg" />
-              </a>
-            </div>
+            
           </div>
 
           {/* Navigation Links */}
