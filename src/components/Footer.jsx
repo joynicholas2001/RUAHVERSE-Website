@@ -75,9 +75,9 @@ const Footer = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="space-y-6">
+          <div className="space-y-6 text-center md:text-left">
             <h4 className="text-lg font-semibold text-white">Get In Touch</h4>
-            <div className="space-y-3">
+            <div className="space-y-3 flex flex-col items-center md:items-start">
               <div className="flex items-center space-x-3">
                 <FaEnvelope className="text-primary-400 text-sm flex-shrink-0" />
                 <span className="text-gray-300 text-sm">itzjoynicholas@gmail.com</span>
