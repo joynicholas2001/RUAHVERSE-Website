@@ -46,8 +46,7 @@ const Contact = () => {
                   <FaMapMarkerAlt className="contact-icon" />
                   <div className="contact-text">
                     <h4>Location</h4>
-                    <p>Remote & Worldwide</p>
-                    <span>Serving clients globally</span>
+                    <p>Remote</p>
                   </div>
                 </div>
               </div>

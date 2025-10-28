@@ -7,7 +7,7 @@ const Projects = () => {
       id: 1,
       title: "E-Commerce Platform",
       description: "React based E-Commerce solution with React frontend, Mongo database. Features include user authentication, payment integration, and admin dashboard.",
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop&crop=top",
+      image: "https://unsplash.com/photos/an-image-of-a-cell-phone-with-a-target-in-it-5hp2g8Aem08",
       technologies: ["React", "Mongo DB", "API Integration", "3 Different Payment gateways for 3 branches"],
       features: ["User Authentication", "Payment Gateway", "Inventory Management", "Order Tracking"],
       liveUrl: "https://artgram.in",

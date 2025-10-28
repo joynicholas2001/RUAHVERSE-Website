@@ -66,7 +66,6 @@ const Services = () => {
                   <li key={featureIndex}>{feature}</li>
                 ))}
               </ul>
-              <button className="service-cta">Learn More</button>
             </div>
           ))}
         </div>
