@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaTwitter, FaArrowUp } from 'react-icons/fa'
 
 const Footer = () => {
@@ -101,15 +102,12 @@ const Footer = () => {
             <div className="text-center md:text-left">
               <p className="text-gray-400 text-sm">&copy; {currentYear} Ruah Verse. All rights reserved.</p>
               <div className="flex flex-wrap justify-center md:justify-start space-x-6 mt-2">
-                <a href="#privacy" className="text-gray-400 hover:text-primary-400 text-xs transition-colors duration-300">
+                <Link to="/privacy-policy" className="text-gray-400 hover:text-primary-400 text-xs transition-colors duration-300">
                   Privacy Policy
-                </a>
-                <a href="#terms" className="text-gray-400 hover:text-primary-400 text-xs transition-colors duration-300">
+                </Link>
+                <Link to="/terms-of-service" className="text-gray-400 hover:text-primary-400 text-xs transition-colors duration-300">
                   Terms of Service
-                </a>
-                <a href="#cookies" className="text-gray-400 hover:text-primary-400 text-xs transition-colors duration-300">
-                  Cookie Policy
-                </a>
+                </Link>
               </div>
             </div>
             <div className="flex items-center">

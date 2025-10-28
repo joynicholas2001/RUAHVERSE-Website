@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const location = useLocation()
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,12 +46,16 @@ const Header = () => {
     }
   }, [isMenuOpen])
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
+  const handleNavLinkClick = (path, sectionId) => {
     setIsMenuOpen(false)
+    if (location.pathname === path) {
+      const element = document.getElementById(sectionId)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    } else {
+      navigate(path + (sectionId ? `#${sectionId}` : ''))
+    }
   }
 
   return (
@@ -68,30 +75,30 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#home" onClick={() => scrollToSection('home')} 
+            <Link to="/" onClick={() => handleNavLinkClick('/', 'home')} 
                className="text-gray-700 hover:text-primary-500 transition-colors duration-300 font-medium">
               Home
-            </a>
-            <a href="#about" onClick={() => scrollToSection('about')} 
+            </Link>
+            <Link to="/" onClick={() => handleNavLinkClick('/', 'about')} 
                className="text-gray-700 hover:text-primary-500 transition-colors duration-300 font-medium">
               About
-            </a>
-            <a href="#services" onClick={() => scrollToSection('services')} 
+            </Link>
+            <Link to="/" onClick={() => handleNavLinkClick('/', 'services')} 
                className="text-gray-700 hover:text-primary-500 transition-colors duration-300 font-medium">
               Services
-            </a>
-            <a href="#technologies" onClick={() => scrollToSection('technologies')} 
+            </Link>
+            <Link to="/" onClick={() => handleNavLinkClick('/', 'technologies')} 
                className="text-gray-700 hover:text-primary-500 transition-colors duration-300 font-medium">
               Technologies
-            </a>
-            <a href="#projects" onClick={() => scrollToSection('projects')} 
+            </Link>
+            <Link to="/" onClick={() => handleNavLinkClick('/', 'projects')} 
                className="text-gray-700 hover:text-primary-500 transition-colors duration-300 font-medium">
               Projects
-            </a>
-            <a href="#contact" onClick={() => scrollToSection('contact')} 
+            </Link>
+            <Link to="/" onClick={() => handleNavLinkClick('/', 'contact')} 
                className="btn-primary px-6 py-2 text-sm">
               Contact
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -110,49 +117,49 @@ const Header = () => {
         }`}>
           <div className="pb-6 pt-2 border-t border-gray-200 mt-2">
             <nav className="flex flex-col space-y-1">
-              <a 
-                href="#home" 
-                onClick={() => scrollToSection('home')} 
+              <Link 
+                to="/" 
+                onClick={() => handleNavLinkClick('/', 'home')} 
                 className="block px-4 py-3 text-gray-700 hover:text-primary-500 hover:bg-gray-50 rounded-lg transition-all duration-200 font-medium"
               >
                 Home
-              </a>
-              <a 
-                href="#about" 
-                onClick={() => scrollToSection('about')} 
+              </Link>
+              <Link 
+                to="/" 
+                onClick={() => handleNavLinkClick('/', 'about')} 
                 className="block px-4 py-3 text-gray-700 hover:text-primary-500 hover:bg-gray-50 rounded-lg transition-all duration-200 font-medium"
               >
                 About
-              </a>
-              <a 
-                href="#services" 
-                onClick={() => scrollToSection('services')} 
+              </Link>
+              <Link 
+                to="/" 
+                onClick={() => handleNavLinkClick('/', 'services')} 
                 className="block px-4 py-3 text-gray-700 hover:text-primary-500 hover:bg-gray-50 rounded-lg transition-all duration-200 font-medium"
               >
                 Services
-              </a>
-              <a 
-                href="#technologies" 
-                onClick={() => scrollToSection('technologies')} 
+              </Link>
+              <Link 
+                to="/" 
+                onClick={() => handleNavLinkClick('/', 'technologies')} 
                 className="block px-4 py-3 text-gray-700 hover:text-primary-500 hover:bg-gray-50 rounded-lg transition-all duration-200 font-medium"
               >
                 Technologies
-              </a>
-              <a 
-                href="#projects" 
-                onClick={() => scrollToSection('projects')} 
+              </Link>
+              <Link 
+                to="/" 
+                onClick={() => handleNavLinkClick('/', 'projects')} 
                 className="block px-4 py-3 text-gray-700 hover:text-primary-500 hover:bg-gray-50 rounded-lg transition-all duration-200 font-medium"
               >
                 Projects
-              </a>
+              </Link>
               <div className="px-4 pt-3">
-                <a 
-                  href="#contact" 
-                  onClick={() => scrollToSection('contact')} 
+                <Link 
+                  to="/" 
+                  onClick={() => handleNavLinkClick('/', 'contact')} 
                   className="block w-full btn-primary text-center py-3 text-sm rounded-lg"
                 >
                   Get Started
-                </a>
+                </Link>
               </div>
             </nav>
           </div>

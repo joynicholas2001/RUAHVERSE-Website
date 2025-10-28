@@ -5,9 +5,9 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: <strong>E-Commerce Platform</strong>,
       description: "React based E-Commerce solution with React frontend, Mongo database. Features include user authentication, payment integration, and admin dashboard.",
-      image: "https://via.placeholder.com/400x250/F0F0F0/000000?text=E-Commerce+Project",
+      image: "https://images.unsplash.com/photo-1522199755839-e2ba9b43d090?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       technologies: ["React", "Mongo DB", "API Integration", "3 Different Payment gateways for 3 branches"],
       features: ["User Authentication", "Payment Gateway", "Inventory Management", "Order Tracking"],
       liveUrl: "https://artgram.in",
@@ -34,19 +34,8 @@ const Projects = () => {
         <div className="projects-grid">
           {filteredProjects.map(project => (
             <div key={project.id} className="project-card">
-              <div className="project-image">
-                <img src={project.image} alt={project.title} />
-                <div className="project-overlay">
-                  <div className="project-links">
-                    <a href={project.liveUrl} className="project-link" title="View Live" target="_blank" rel="noopener noreferrer">
-                      <FaEye />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              
               <div className="project-content">
-                <h3 className="project.title">{project.title}</h3>
+                <h3 className="project.title text-xl"><strong>{project.title}</strong></h3>
                 <p className="project-description">{project.description}</p>
                 
                 <div className="project-technologies">
