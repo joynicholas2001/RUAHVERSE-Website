@@ -14,8 +14,8 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="contact-content">
-          <div className="contact-info">
+        <div className="contact-content flex flex-col lg:flex-row justify-center items-center gap-10 mt-10">
+          <div className="contact-info w-full lg:w-1/2">
             <div className="info-card">
               <h3>Let's Build Something Amazing Together</h3>
               <p>
@@ -54,7 +54,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="contact-form-container">
+          <div className="contact-form-container w-full lg:w-1/2">
             <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border-2 border-green-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="text-center mb-6">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-green-500 rounded-full mb-4 shadow-lg animate-pulse">
