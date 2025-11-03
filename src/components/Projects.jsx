@@ -12,6 +12,16 @@ const Projects = () => {
       features: ["User Authentication", "Payment Gateway", "Inventory Management", "Order Tracking"],
       liveUrl: "https://artgram.in",
     },
+
+    {
+      id: 2,
+      title: <strong>E-Commerce Cafe Website</strong>,
+      description: "React based E-Commerce solution with React frontend, Mongo database. Features include user authentication, payment integration, and admin dashboard.",
+      image: "https://images.unsplash.com/photo-1522199755839-e2ba9b43d090?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      technologies: ["React", "Mongo DB", "API Integration", "3 Different Payment gateways for 3 branches"],
+      features: ["Modern and Clean Visual Design","Premium Design","Intuitive User Interface (UI) & Navigation", "Comprehensive Product Presentation", "Trust and Credibility Elements"],
+      liveUrl: "https://araku-house.vercel.app/",
+    },
     
   ]
 
