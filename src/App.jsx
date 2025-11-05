@@ -6,6 +6,7 @@ import About from './components/About'
 import Services from './components/Services'
 import Technologies from './components/Technologies'
 import Projects from './components/Projects'
+import Trust from './components/Trust'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import PrivacyPolicy from './components/PrivacyPolicy'
@@ -25,6 +26,7 @@ function App() {
               <Services />
               <Technologies />
               <Projects />
+              <Trust />
               <Contact />
             </main>
           } />

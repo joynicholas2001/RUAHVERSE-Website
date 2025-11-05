@@ -18,14 +18,17 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Welcome to <span className="bg-gradient-to-br from-primary-500 to-secondary-500 bg-clip-text text-transparent">Ruah Verse</span>
+              Enterprise-grade <span className="bg-gradient-to-br from-primary-500 to-secondary-500 bg-clip-text text-transparent">Full-Stack Apps</span>
             </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-gray-700">
-              Full-Stack Web Development Excellence
+            <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-700">
+              React JS, Flask & UI/UX — Done Fast
             </h2>
+            <p className="text-xl md:text-2xl text-gray-600 mb-6 font-medium">
+              Scalable, secure web solutions for growing businesses
+            </p>
             <p className="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl">
-              RuahVerse was founded with strong dedication and a clear mission — to deliver outstanding websites backed by solid technical expertise and a deep commitment to quality. 
-              We believe in building long-term relationships with our clients by offering custom full-stack solutions that truly meet their business needs.
+              RuahVerse delivers outstanding web applications backed by solid technical expertise and a deep commitment to quality. 
+              We transform your ideas into powerful, scalable solutions that drive real business growth.
             </p>
             <div className="flex justify-center lg:justify-start items-center gap-8 mb-10">
               <div className="flex items-center gap-3">
@@ -43,16 +46,16 @@ const Hero = () => {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button 
-                className="btn-primary hover:transform hover:-translate-y-1 transition-all duration-300"
+                className="btn-primary hover:transform hover:-translate-y-1 transition-all duration-300 text-lg px-8 py-4 shadow-xl hover:shadow-2xl"
                 onClick={scrollToContact}
               >
-                Start Your Project Today
+                Get a Free Quote →
               </button>
               <button 
-                className="btn-secondary hover:transform hover:-translate-y-1 transition-all duration-300"
-                onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
+                className="btn-secondary hover:transform hover:-translate-y-1 transition-all duration-300 text-lg"
+                onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}
               >
-                Learn More About Us
+                View Our Portfolio
               </button>
             </div>
           </div>

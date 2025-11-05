@@ -65,12 +65,37 @@ const Footer = () => {
               </li>
               <li>
                 <a 
+                  href="#trust" 
+                  onClick={() => scrollToSection('trust')}
+                  className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm"
+                >
+                  Why Trust Us
+                </a>
+              </li>
+              <li>
+                <a 
                   href="#contact" 
                   onClick={() => scrollToSection('contact')}
                   className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm"
                 >
                   Contact
                 </a>
+              </li>
+              <li>
+                <Link 
+                  to="/privacy-policy"
+                  className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/terms-of-service"
+                  className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm"
+                >
+                  Terms of Service
+                </Link>
               </li>
             </ul>
           </div>
