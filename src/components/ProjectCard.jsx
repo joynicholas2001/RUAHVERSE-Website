@@ -61,7 +61,7 @@ const ProjectCard = ({ project }) => {
             href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center text-primary-500 hover:text-primary-600"
+            className="inline-flex items-center px-4 py-2 bg-primary-gradient text-white rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
           >
             <FaExternalLinkAlt className="mr-2" />
             View Live Site
