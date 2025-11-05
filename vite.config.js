@@ -4,14 +4,19 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   css: {
-    postcss: true
+    postcss: './postcss.config.js'
   },
   server: {
     port: 3000,
+    host: true,
     open: true
   },
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    sourcemap: true
   },
-  base: process.env.GITHUB_ACTIONS ? '/RUAHVERSE-Website/' : '/'
+  base: '/',
+  define: {
+    'process.env': {}
+  }
 })

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaTwitter, FaArrowUp } from 'react-icons/fa'
 
 const Footer = () => {
@@ -7,7 +6,8 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (event, sectionId) => {
+    event.preventDefault()
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
@@ -39,7 +39,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="#about" 
-                  onClick={() => scrollToSection('about')}
+                  onClick={(e) => scrollToSection(e, 'about')}
                   className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm"
                 >
                   About
@@ -48,7 +48,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="#services" 
-                  onClick={() => scrollToSection('services')}
+                  onClick={(e) => scrollToSection(e, 'services')}
                   className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm"
                 >
                   Services
@@ -57,7 +57,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="#projects" 
-                  onClick={() => scrollToSection('projects')}
+                  onClick={(e) => scrollToSection(e, 'projects')}
                   className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm"
                 >
                   Projects
@@ -65,37 +65,21 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="#trust" 
-                  onClick={() => scrollToSection('trust')}
+                  href="#technologies" 
+                  onClick={(e) => scrollToSection(e, 'technologies')}
                   className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm"
                 >
-                  Why Trust Us
+                  Technologies
                 </a>
               </li>
               <li>
                 <a 
                   href="#contact" 
-                  onClick={() => scrollToSection('contact')}
+                  onClick={(e) => scrollToSection(e, 'contact')}
                   className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm"
                 >
                   Contact
                 </a>
-              </li>
-              <li>
-                <Link 
-                  to="/privacy-policy"
-                  className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/terms-of-service"
-                  className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm"
-                >
-                  Terms of Service
-                </Link>
               </li>
             </ul>
           </div>
@@ -127,12 +111,18 @@ const Footer = () => {
             <div className="text-center md:text-left">
               <p className="text-gray-400 text-sm">&copy; {currentYear} Ruah Verse. All rights reserved.</p>
               <div className="flex flex-wrap justify-center md:justify-start space-x-6 mt-2">
-                <Link to="/privacy-policy" className="text-gray-400 hover:text-primary-400 text-xs transition-colors duration-300">
+                <button 
+                  onClick={() => alert('Privacy Policy content will be displayed here')}
+                  className="text-gray-400 hover:text-primary-400 text-xs transition-colors duration-300"
+                >
                   Privacy Policy
-                </Link>
-                <Link to="/terms-of-service" className="text-gray-400 hover:text-primary-400 text-xs transition-colors duration-300">
+                </button>
+                <button 
+                  onClick={() => alert('Terms of Service content will be displayed here')}
+                  className="text-gray-400 hover:text-primary-400 text-xs transition-colors duration-300"
+                >
                   Terms of Service
-                </Link>
+                </button>
               </div>
             </div>
             <div className="flex items-center">

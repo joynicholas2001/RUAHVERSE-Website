@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Enterprise-grade <span className="bg-gradient-to-br from-primary-500 to-secondary-500 bg-clip-text text-transparent">Full-Stack Apps</span>
+              Ruah Verse<span className="bg-gradient-to-br from-primary-500 to-secondary-500 bg-clip-text text-transparent"></span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-700">
               React JS, Flask & UI/UX — Done Fast

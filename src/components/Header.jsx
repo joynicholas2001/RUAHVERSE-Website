@@ -1,16 +1,27 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const location = useLocation()
-  const navigate = useNavigate()
+  const [activeSection, setActiveSection] = useState('')
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
+      
+      // Update active section based on scroll position
+      const sections = ['home', 'about', 'services', 'technologies', 'projects', 'contact']
+      for (const section of sections) {
+        const element = document.getElementById(section)
+        if (element) {
+          const rect = element.getBoundingClientRect()
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            setActiveSection(section)
+            break
+          }
+        }
+      }
     }
     
     const handleResize = () => {
@@ -27,6 +38,16 @@ const Header = () => {
       window.removeEventListener('resize', handleResize)
     }
   }, [])
+
+  const scrollToSection = (e, sectionId) => {
+    e.preventDefault()
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+      setActiveSection(sectionId)
+      setIsMenuOpen(false)
+    }
+  }
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -46,17 +67,7 @@ const Header = () => {
     }
   }, [isMenuOpen])
 
-  const handleNavLinkClick = (path, sectionId) => {
-    setIsMenuOpen(false)
-    if (location.pathname === path) {
-      const element = document.getElementById(sectionId)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-      }
-    } else {
-      navigate(path + (sectionId ? `#${sectionId}` : ''))
-    }
-  }
+  // This function has been replaced by scrollToSection
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -75,30 +86,36 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" onClick={() => handleNavLinkClick('/', 'home')} 
-               className="text-gray-700 hover:text-primary-500 transition-colors duration-300 font-medium">
+            <a href="#home" 
+               onClick={(e) => scrollToSection(e, 'home')}
+               className={`text-gray-700 hover:text-primary-500 transition-colors duration-300 font-medium ${activeSection === 'home' ? 'text-primary-500' : ''}`}>
               Home
-            </Link>
-            <Link to="/" onClick={() => handleNavLinkClick('/', 'about')} 
-               className="text-gray-700 hover:text-primary-500 transition-colors duration-300 font-medium">
+            </a>
+            <a href="#about" 
+               onClick={(e) => scrollToSection(e, 'about')}
+               className={`text-gray-700 hover:text-primary-500 transition-colors duration-300 font-medium ${activeSection === 'about' ? 'text-primary-500' : ''}`}>
               About
-            </Link>
-            <Link to="/" onClick={() => handleNavLinkClick('/', 'services')} 
-               className="text-gray-700 hover:text-primary-500 transition-colors duration-300 font-medium">
+            </a>
+            <a href="#services" 
+               onClick={(e) => scrollToSection(e, 'services')}
+               className={`text-gray-700 hover:text-primary-500 transition-colors duration-300 font-medium ${activeSection === 'services' ? 'text-primary-500' : ''}`}>
               Services
-            </Link>
-            <Link to="/" onClick={() => handleNavLinkClick('/', 'technologies')} 
-               className="text-gray-700 hover:text-primary-500 transition-colors duration-300 font-medium">
+            </a>
+            <a href="#technologies" 
+               onClick={(e) => scrollToSection(e, 'technologies')}
+               className={`text-gray-700 hover:text-primary-500 transition-colors duration-300 font-medium ${activeSection === 'technologies' ? 'text-primary-500' : ''}`}>
               Technologies
-            </Link>
-            <Link to="/" onClick={() => handleNavLinkClick('/', 'projects')} 
-               className="text-gray-700 hover:text-primary-500 transition-colors duration-300 font-medium">
+            </a>
+            <a href="#projects" 
+               onClick={(e) => scrollToSection(e, 'projects')}
+               className={`text-gray-700 hover:text-primary-500 transition-colors duration-300 font-medium ${activeSection === 'projects' ? 'text-primary-500' : ''}`}>
               Projects
-            </Link>
-            <Link to="/" onClick={() => handleNavLinkClick('/', 'contact')} 
-               className="btn-primary px-6 py-2 text-sm">
+            </a>
+            <a href="#contact" 
+               onClick={(e) => scrollToSection(e, 'contact')}
+               className={`btn-primary px-6 py-2 text-sm ${activeSection === 'contact' ? 'bg-primary-600' : ''}`}>
               Contact
-            </Link>
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -117,49 +134,49 @@ const Header = () => {
         }`}>
           <div className="pb-6 pt-2 border-t border-gray-200 mt-2">
             <nav className="flex flex-col space-y-1">
-              <Link 
-                to="/" 
-                onClick={() => handleNavLinkClick('/', 'home')} 
-                className="block px-4 py-3 text-gray-700 hover:text-primary-500 hover:bg-gray-50 rounded-lg transition-all duration-200 font-medium"
+              <a 
+                href="#home" 
+                onClick={(e) => scrollToSection(e, 'home')} 
+                className={`block px-4 py-3 text-gray-700 hover:text-primary-500 hover:bg-gray-50 rounded-lg transition-all duration-200 font-medium ${activeSection === 'home' ? 'text-primary-500' : ''}`}
               >
                 Home
-              </Link>
-              <Link 
-                to="/" 
-                onClick={() => handleNavLinkClick('/', 'about')} 
-                className="block px-4 py-3 text-gray-700 hover:text-primary-500 hover:bg-gray-50 rounded-lg transition-all duration-200 font-medium"
+              </a>
+              <a 
+                href="#about" 
+                onClick={(e) => scrollToSection(e, 'about')} 
+                className={`block px-4 py-3 text-gray-700 hover:text-primary-500 hover:bg-gray-50 rounded-lg transition-all duration-200 font-medium ${activeSection === 'about' ? 'text-primary-500' : ''}`}
               >
                 About
-              </Link>
-              <Link 
-                to="/" 
-                onClick={() => handleNavLinkClick('/', 'services')} 
-                className="block px-4 py-3 text-gray-700 hover:text-primary-500 hover:bg-gray-50 rounded-lg transition-all duration-200 font-medium"
+              </a>
+              <a 
+                href="#services" 
+                onClick={(e) => scrollToSection(e, 'services')} 
+                className={`block px-4 py-3 text-gray-700 hover:text-primary-500 hover:bg-gray-50 rounded-lg transition-all duration-200 font-medium ${activeSection === 'services' ? 'text-primary-500' : ''}`}
               >
                 Services
-              </Link>
-              <Link 
-                to="/" 
-                onClick={() => handleNavLinkClick('/', 'technologies')} 
-                className="block px-4 py-3 text-gray-700 hover:text-primary-500 hover:bg-gray-50 rounded-lg transition-all duration-200 font-medium"
+              </a>
+              <a 
+                href="#technologies" 
+                onClick={(e) => scrollToSection(e, 'technologies')} 
+                className={`block px-4 py-3 text-gray-700 hover:text-primary-500 hover:bg-gray-50 rounded-lg transition-all duration-200 font-medium ${activeSection === 'technologies' ? 'text-primary-500' : ''}`}
               >
                 Technologies
-              </Link>
-              <Link 
-                to="/" 
-                onClick={() => handleNavLinkClick('/', 'projects')} 
-                className="block px-4 py-3 text-gray-700 hover:text-primary-500 hover:bg-gray-50 rounded-lg transition-all duration-200 font-medium"
+              </a>
+              <a 
+                href="#projects" 
+                onClick={(e) => scrollToSection(e, 'projects')} 
+                className={`block px-4 py-3 text-gray-700 hover:text-primary-500 hover:bg-gray-50 rounded-lg transition-all duration-200 font-medium ${activeSection === 'projects' ? 'text-primary-500' : ''}`}
               >
                 Projects
-              </Link>
+              </a>
               <div className="px-4 pt-3">
-                <Link 
-                  to="/" 
-                  onClick={() => handleNavLinkClick('/', 'contact')} 
-                  className="block w-full btn-primary text-center py-3 text-sm rounded-lg"
+                <a 
+                  href="#contact" 
+                  onClick={(e) => scrollToSection(e, 'contact')} 
+                  className={`block w-full btn-primary text-center py-3 text-sm rounded-lg ${activeSection === 'contact' ? 'bg-primary-600' : ''}`}
                 >
-                  Get Started
-                </Link>
+                  Contact
+                </a>
               </div>
             </nav>
           </div>
