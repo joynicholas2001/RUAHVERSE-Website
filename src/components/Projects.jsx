@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ProjectCard from './ProjectCard';
 
@@ -5,22 +6,9 @@ const Projects = () => {
   const [projects] = React.useState([
     {
       id: 1,
-      title: "ArtGram E-Commerce Platform",
-      description: "A scalable e-commerce solution built for a multi-branch art supplies retailer. The platform handles thousands of daily transactions across multiple locations with real-time inventory sync.",
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop&crop=top",
-      technologies: ["React", "MongoDB", "Node.js", "Express"],
-      features: ["Multi-branch Inventory", "Real-time Stock Updates", "Advanced Analytics", "Mobile-first Design"],
-      results: [
-        "30% increase in online sales",
-        "99.9% uptime"
-      ],
-      liveUrl: "https://artgram.in"
-    },
-    {
-      id: 2,
       title: "Araku House Café",
       description: "A modern e-commerce website for a premium café chain, featuring online ordering, menu management, and a loyalty program.",
-      image: "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=400&h=250&fit=crop&crop=top",
+      image: "/src/hat-trick-MBhN7ZexnMA-unsplash.jpg",
       technologies: ["React", "MongoDB", "Next.js", "Tailwind CSS"],
       features: ["Modern UI/UX Design", "Online Ordering", "Menu Management", "Customer Reviews"],
       results: [
@@ -43,9 +31,11 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="flex justify-center mb-16">
           {projects.map(project => (
-            <ProjectCard key={project.id} project={project} />
+            <div key={project.id} className="max-w-lg">
+              <ProjectCard project={project} />
+            </div>
           ))}
         </div>
 
