@@ -8,7 +8,6 @@ const Projects = () => {
       id: 1,
       title: "Araku House Café",
       description: "A modern e-commerce website for a premium café chain, featuring online ordering, menu management, and a loyalty program.",
-      image: "/src/hat-trick-MBhN7ZexnMA-unsplash.jpg",
       technologies: ["React", "MongoDB", "Next.js", "Tailwind CSS"],
       features: ["Modern UI/UX Design", "Online Ordering", "Menu Management", "Customer Reviews"],
       results: [
