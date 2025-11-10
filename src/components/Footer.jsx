@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaTwitter, FaArrowUp } from 'react-icons/fa'
 
-const Footer = () => {
+const Footer = ({ onShowLegal }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
@@ -112,13 +112,13 @@ const Footer = () => {
               <p className="text-gray-400 text-sm">&copy; {currentYear} Ruah Verse. All rights reserved.</p>
               <div className="flex flex-wrap justify-center md:justify-start space-x-6 mt-2">
                 <button 
-                  onClick={() => alert('Privacy Policy content will be displayed here')}
+                  onClick={() => onShowLegal('privacy')}
                   className="text-gray-400 hover:text-primary-400 text-xs transition-colors duration-300"
                 >
                   Privacy Policy
                 </button>
                 <button 
-                  onClick={() => alert('Terms of Service content will be displayed here')}
+                  onClick={() => onShowLegal('terms')}
                   className="text-gray-400 hover:text-primary-400 text-xs transition-colors duration-300"
                 >
                   Terms of Service
