@@ -130,30 +130,32 @@ const Technologies = () => {
           </div>
         </div>
 
-        <div className="tech-commitment">
-          <div className="commitment-content">
-            <h3>Committed to Excellence</h3>
-            <p>
-              We continuously update our skills and adopt emerging technologies to ensure 
-              your projects are built with the most effective and modern solutions available.
-            </p>
-            <div className="commitment-features">
-              <div className="feature">
-                <span className="feature-icon">🚀</span>
-                <span>Latest Framework Versions</span>
-              </div>
-              <div className="feature">
-                <span className="feature-icon">🔒</span>
-                <span>Security Best Practices</span>
-              </div>
-              <div className="feature">
-                <span className="feature-icon">⚡</span>
-                <span>Performance Optimization</span>
-              </div>
-              <div className="feature">
-                <span className="feature-icon">📱</span>
-                <span>Responsive Design</span>
-              </div>
+        <div className="mt-20 text-center">
+          <h3 className="text-3xl font-bold mb-4">Committed to Excellence</h3>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+            We continuously update our skills and adopt emerging technologies to ensure 
+            your projects are built with the most effective and modern solutions available.
+          </p>
+          <div className="grid md:grid-cols-4 gap-8 text-lg">
+            <div className="flex flex-col items-center p-4">
+              <span className="text-5xl mb-3">🚀</span>
+              <h4 className="font-semibold mb-1">Up-to-Date Technology</h4>
+              <p className="text-gray-500 text-base">We use the latest, most stable versions of frameworks and libraries.</p>
+            </div>
+            <div className="flex flex-col items-center p-4">
+              <span className="text-5xl mb-3">🔒</span>
+              <h4 className="font-semibold mb-1">Secure by Design</h4>
+              <p className="text-gray-500 text-base">We follow industry best practices to keep your applications safe.</p>
+            </div>
+            <div className="flex flex-col items-center p-4">
+              <span className="text-5xl mb-3">⚡</span>
+              <h4 className="font-semibold mb-1">High Performance</h4>
+              <p className="text-gray-500 text-base">Our code is optimized for speed, ensuring a fast user experience.</p>
+            </div>
+            <div className="flex flex-col items-center p-4">
+              <span className="text-5xl mb-3">📱</span>
+              <h4 className="font-semibold mb-1">Works on All Devices</h4>
+              <p className="text-gray-500 text-base">Our designs are fully responsive and look great on any screen size.</p>
             </div>
           </div>
         </div>
