@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -31,6 +31,18 @@ function App() {
   const closeLegal = () => {
     setLegalContent(null);
   };
+
+  useEffect(() => {
+    if (legalContent) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [legalContent]);
 
   return (
     <div className="min-h-screen bg-white">
