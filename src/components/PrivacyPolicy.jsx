@@ -49,7 +49,7 @@ const PrivacyPolicy = () => {
       <p className="mb-4">
         We may update this policy as needed. Changes will be posted on our website with an updated effective date.
       </p>
-      <p className="text-sm text-gray-500">Date: 28 Oct 2025</p>
+      <p className="text-sm text-gray-500">Date: 10 November 2025</p>
     </div>
   );
 };
