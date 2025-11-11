@@ -21,7 +21,7 @@ const Services = () => {
     },
     {
       icon: <FaDatabase />,
-      title: "Database Solutions",
+      title: <strong>Database Solutions</strong>,
       description: "Complete database design and management with SQL and NoSQL databases. From MongoDB to PostgreSQL, we optimize your data layer.",
       features: ["SQL Database Design", "MongoDB Integration", "Data Modeling", "Query Optimization"],
       technologies: ["PostgreSQL", "MongoDB", "Redis", "MySQL"],
@@ -29,7 +29,7 @@ const Services = () => {
     },
     {
       icon: <FaMobile />,
-      title: "Full-Stack Applications",
+      title: <strong>Full-Stack Applications</strong>,
       description: "End-to-end web applications that integrate seamlessly from frontend to backend. Complete solutions that scale with your business.",
       features: ["MERN Stack Development", "API Integration", "User Authentication", "Real-time Features"],
       technologies: ["React", "Node.js", "MongoDB", "Express"],
@@ -37,7 +37,7 @@ const Services = () => {
     },
     {
       icon: <FaCloud />,
-      title: "Web Application Deployment",
+      title: <strong>Web Application Deployment</strong>,
       description: "Professional deployment and hosting solutions with CI/CD pipelines. Get your application live with optimal performance and security.",
       features: ["Cloud Deployment", "CI/CD Setup", "Performance Monitoring", "Security Implementation"],
       technologies: ["AWS", "Docker", "Kubernetes", "Jenkins"],
@@ -45,7 +45,7 @@ const Services = () => {
     },
     {
       icon: <FaCog />,
-      title: "Maintenance & Support",
+      title: <strong>Maintenance & Support</strong>,
       description: "Ongoing maintenance, updates, and technical support to keep your applications running smoothly and securely.",
       features: ["24/7 Support", "Regular Updates", "Bug Fixes", "Performance Monitoring"],
       technologies: ["DevOps", "Monitoring Tools", "Backup Systems", "Security Tools"],

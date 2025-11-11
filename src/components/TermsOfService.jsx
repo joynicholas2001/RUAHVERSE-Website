@@ -56,7 +56,7 @@ const TermsOfService = () => {
       <p className="mb-4">
         For questions regarding these Terms or your project, contact us at [your email here].
       </p>
-      <p className="text-sm text-gray-500">Effective Date: 28 Oct 2025</p>
+      <p className="text-sm text-gray-500">Effective Date: 10 November 2025</p>
     </div>
   );
 };
