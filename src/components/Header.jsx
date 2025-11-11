@@ -11,7 +11,7 @@ const Header = () => {
       setIsScrolled(window.scrollY > 50)
       
       // Update active section based on scroll position
-      const sections = ['home', 'about', 'services', 'technologies', 'projects', 'contact', 'legal']
+      const sections = ['home', 'about', 'services', 'technologies', 'projects', 'contact']
       for (const section of sections) {
         const element = document.getElementById(section)
         if (element) {
@@ -115,11 +115,6 @@ const Header = () => {
                onClick={(e) => scrollToSection(e, 'contact')}
                className={`btn-primary px-6 py-2 text-sm ${activeSection === 'contact' ? 'bg-primary-600' : ''}`}>
               Contact
-            </a>
-            <a href="#legal" 
-               onClick={(e) => scrollToSection(e, 'legal')}
-               className={`text-gray-700 hover:text-primary-500 transition-colors duration-300 font-medium ${activeSection === 'legal' ? 'text-primary-500' : ''}`}>
-              Legal
             </a>
           </nav>
 
