@@ -9,7 +9,7 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     font-family: 'Inter', sans-serif;
     line-height: 1.625;
@@ -134,6 +134,49 @@
     color: transparent;
     -webkit-text-fill-color: transparent;
   }
+
+  /* ✅ Mobile Navbar Overlay Fix */
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(6px);
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .mobile-nav.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .mobile-nav a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    color: #1f2937;
+    transition: color 0.3s ease;
+  }
+
+  .mobile-nav a:hover {
+    color: #667eea;
+  }
+
+  .mobile-menu-toggle {
+    z-index: 60;
+    cursor: pointer;
+  }
 }
 
 @layer utilities {
@@ -181,7 +224,7 @@
     animation: fadeInUp 0.3s ease-out forwards;
   }
 
-  /* Mobile menu utilities */
+  /* Mobile menu backdrop blur */
   .mobile-menu-backdrop {
     background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2px);
