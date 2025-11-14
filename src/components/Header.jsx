@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import logo from '../assests/RUAH-VERSE-LOGO_PNG.png'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -72,7 +73,7 @@ const Header = () => {
           <div className="flex-shrink-0">
             <a href="#home" onClick={(e) => scrollToSection(e, 'home')}>
               <img
-                src="/src/assests/RUAH-VERSE-LOGO_PNG.png"
+                src={logo}
                 alt="RuahVerse Logo"
                 className="h-12 w-auto md:h-16 object-contain"
               />

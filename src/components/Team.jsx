@@ -2,12 +2,12 @@ import React from "react";
 
 const Team = () => {
   const teamMembers = [
-    { name: "Joy Nicholas Mangalapudi", role: "Founder, Ruah Verse" },
-    { name: "JayanthSathya Gopu", role: "HR, Ruah Verse" },
-    { name: "P Bhanu Saketh", role: "Back-End Developer" },
-    { name: "Yogeswar", role: "Full Stack Developer" },
-    { name: "Vasudharini", role: "Full Stack Developer" },
-    { name: "Harini", role: "Full Stack Developer" },
+    { name: "Joy Nicholas Mangalapudi", role: "Founder & Chief Executive Officer, Ruah Verse" },
+    { name: "JayanthSathya Gopu", role: "Co-Founder & Human Resource Coordinator" },
+    { name: "P Bhanu Saketh", role: "Back-End Software Engineer" },
+    { name: "Yogeswar", role: "Full Stack Software  Engineer" },
+    { name: "Vasudharini", role: "Full Stack Software  Engineer" },
+    { name: "Harini", role: "Full Stack Software Engineer" },
   ];
 
   return (
