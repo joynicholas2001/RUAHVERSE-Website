@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaCode, FaRocket, FaUsers } from 'react-icons/fa'
+import logo from '../assests/RUAH-VERSE-LOGO_PNG.png'
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -17,8 +18,13 @@ const Hero = () => {
       <div className="max-w-6xl mx-auto px-5 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Ruah Verse<span className="bg-gradient-to-br from-primary-500 to-secondary-500 bg-clip-text text-transparent"></span>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight flex items-center gap-4 justify-center lg:justify-start">
+              <img 
+                src={logo} 
+                alt="RuahVerse Logo" 
+                className="h-12 md:h-16 lg:h-20 w-auto object-contain"
+              />
+              <span>Ruah Verse<span className="bg-gradient-to-br from-primary-500 to-secondary-500 bg-clip-text text-transparent"></span></span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-700">
               React JS, Flask & UI/UX — Done Fast

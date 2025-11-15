@@ -92,31 +92,6 @@ const About = () => {
             </div>
           </div>
         </div>
-
-        <div className="text-center mt-20">
-          <h3 className="text-3xl font-bold mb-4">Our Team</h3>
-          <p className="text-gray-600 mb-10">
-            Meet the people who make Ruah Verse exceptional.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { name: "Joy Nicholas Mangalapudi", role: "Founder, Ruah Verse" },
-              { name: "JayanthSathya Gopu", role: "HR" },
-              { name: "P Bhanu Saketh", role: "Back-End Developer" },
-              { name: "Yogeswar", role: "Full Stack Developer" },
-              { name: "Vasudharini", role: "Full Stack Developer" },
-              { name: "Harini", role: "Full Stack Developer" },
-            ].map((member, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl shadow p-6 hover:shadow-lg transition"
-              >
-                <h3 className="font-semibold text-lg">{member.name}</h3>
-                <p className="text-blue-600">{member.role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   )

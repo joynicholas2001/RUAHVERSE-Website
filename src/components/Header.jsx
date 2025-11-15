@@ -63,23 +63,25 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white/90 backdrop-blur-sm'
-      } sticky`}
+        isScrolled
+          ? 'bg-white/95 backdrop-blur-md shadow-lg scrolled'
+          : 'bg-white/90 backdrop-blur-sm'
+      }`}
     >
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+      <div className="flex items-center h-16">
+        {/* Logo - positioned at absolute left */}
+        <div className="flex-shrink-0 flex items-center pl-2 md:pl-4">
+          <a href="#home" onClick={(e) => scrollToSection(e, 'home')} className="flex items-center">
+            <img
+              src={logo}
+              alt="RuahVerse Logo"
+              className="logo"
+            />
+          </a>
+        </div>
 
-          {/* Logo Section */}
-          <div className="flex-shrink-0">
-            <a href="#home" onClick={(e) => scrollToSection(e, 'home')}>
-              <img
-                src={logo}
-                alt="RuahVerse Logo"
-                className="h-12 w-auto md:h-16 object-contain"
-              />
-            </a>
-          </div>
-
+        {/* Navigation container - centered */}
+        <div className="flex-1 flex justify-end items-center pr-4">
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a
@@ -91,6 +93,7 @@ const Header = () => {
             >
               Home
             </a>
+
             <a
               href="#about"
               onClick={(e) => scrollToSection(e, 'about')}
@@ -100,6 +103,7 @@ const Header = () => {
             >
               About
             </a>
+
             <a
               href="#services"
               onClick={(e) => scrollToSection(e, 'services')}
@@ -109,6 +113,7 @@ const Header = () => {
             >
               Services
             </a>
+
             <a
               href="#technologies"
               onClick={(e) => scrollToSection(e, 'technologies')}
@@ -118,6 +123,7 @@ const Header = () => {
             >
               Technologies
             </a>
+
             <a
               href="#projects"
               onClick={(e) => scrollToSection(e, 'projects')}
@@ -127,6 +133,7 @@ const Header = () => {
             >
               Projects
             </a>
+
             <a
               href="#contact"
               onClick={(e) => scrollToSection(e, 'contact')}
@@ -168,6 +175,7 @@ const Header = () => {
               >
                 Home
               </a>
+
               <a
                 href="#about"
                 onClick={(e) => scrollToSection(e, 'about')}
@@ -177,6 +185,7 @@ const Header = () => {
               >
                 About
               </a>
+
               <a
                 href="#services"
                 onClick={(e) => scrollToSection(e, 'services')}
@@ -186,6 +195,7 @@ const Header = () => {
               >
                 Services
               </a>
+
               <a
                 href="#technologies"
                 onClick={(e) => scrollToSection(e, 'technologies')}
@@ -195,6 +205,7 @@ const Header = () => {
               >
                 Technologies
               </a>
+
               <a
                 href="#projects"
                 onClick={(e) => scrollToSection(e, 'projects')}
@@ -204,6 +215,7 @@ const Header = () => {
               >
                 Projects
               </a>
+
               <div className="px-4 pt-3">
                 <a
                   href="#contact"

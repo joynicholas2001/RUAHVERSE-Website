@@ -2,17 +2,6 @@ import React from 'react'
 import { FaAward, FaHandshake, FaShieldAlt, FaCertificate } from 'react-icons/fa'
 
 const Trust = () => {
-  const team = [
-    {
-      name: "Joy Nicholas",
-      role: "Founder & Lead Developer",
-      bio: "Full-stack developer with 5+ years of experience in building scalable web applications.",
-      social: {
-        linkedin: "https://linkedin.com/in/joynicholas",
-      }
-    }
-  ]
-
   const certifications = [
     {
       title: "AWS Certified Solutions Architect",
@@ -81,45 +70,6 @@ const Trust = () => {
               Our team holds certifications from industry leaders and stays updated with the latest
               technologies and best practices.
             </p>
-          </div>
-        </div>
-
-        {/* Team Section */}
-        <div className="mb-20">
-          <h3 className="text-3xl font-bold mb-10 text-center">Meet Our Team</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
-                <img 
-                  src={member.image} 
-                  alt={member.name}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-6">
-                  <h4 className="text-xl font-bold mb-2">{member.name}</h4>
-                  <p className="text-primary-500 mb-3">{member.role}</p>
-                  <p className="text-gray-600 mb-4">{member.bio}</p>
-                  <div className="flex gap-4">
-                    <a 
-                      href={member.social.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-blue-500 transition-colors"
-                    >
-                      LinkedIn
-                    </a>
-                    <a 
-                      href={member.social.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-gray-900 transition-colors"
-                    >
-                      GitHub
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
 
